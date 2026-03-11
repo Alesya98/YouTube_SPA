@@ -5,14 +5,15 @@ import { VideoList } from "./VideoList";
 import { HeartOutlined } from "@ant-design/icons";
 import { useSearchParams } from "react-router-dom";
 import { ModalFavorites } from "./ModalFavorites";
-import { closeModal, openModal } from "./redux/modalSlice";
+import { closeModal, modalSelector, openModal } from "./redux/modalSlice";
+import { videoSelector } from "./redux/videoSlice";
 
 export const SearchVideo = () => {
   const [search, setSearch] = useState("");
   const dispatch = useDispatch();
   const inputFocus = useRef(null);
-  const { isSearched } = useSelector((store) => store.video);
-  const { isOpen } = useSelector((store) => store.modal);
+  const { isSearched } = useSelector(videoSelector);
+  const { isOpen } = useSelector(modalSelector);
 
   const [searchParams, setSearchParams] = useSearchParams();
   const query = searchParams.get("q") || "";

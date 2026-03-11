@@ -24,6 +24,45 @@ main {
   width: 100%;
 }
 
+/* header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-header {
+  width: 50px;
+  height: auto;
+  object-fit: contain;
+}
+
+.nav-link {
+  display: flex;
+  gap: 20px;
+}
+
+.link {
+  color: #fa541c;
+}
+
+.link.active {
+  border-bottom: 1px solid #fa541c;
+}
+
+.btn-out {
+  background-color: transparent;
+  color: #fa541c;
+}
+
+/* main */
 .main {
   height: 100%;
   width: 100%;
@@ -35,6 +74,54 @@ main {
   padding-top: 100px;
   height: 100%;
 }
+
+.search-title {
+  margin-bottom: 20px;
+}
+
+.search-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* избранное */
+.search-favorites {
+  width: 100%;
+  position: relative;
+}
+
+.btn-favorites {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+}
+
+.input-search {
+  width: 100%;
+  background-color: #fff;
+  padding: 10px;
+  border: none;
+  height: 40px;
+}
+
+.input-search:focus {
+  outline: none;
+  background-color: #fa541c4d;
+}
+
+.search-btn {
+  background-color: #fa541c;
+  color: #fff;
+  height: 40px;
+  border-radius: 0;
+}
+
+/* modal window*/
 
 .modal-overlay {
 min-height: 100vh;
@@ -86,10 +173,7 @@ gap: 20px;
   align-items: center;
 }
 
-.search-title {
-  margin-bottom: 20px;
-}
-
+/* authorization */
 .logo {
   width: 100px;
   height: auto;
@@ -129,70 +213,6 @@ gap: 20px;
 
 .form-block label {
   margin-left: 20px;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background-color: #fff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.btn-out {
-  background-color: transparent;
-  color: #fa541c;
-}
-
-.nav-link {
-  display: flex;
-  gap: 20px;
-}
-
-.link {
-  color: #fa541c;
-}
-
-.link.active {
-  border-bottom: 1px solid #fa541c;
-}
-
-.logo-header {
-  width: 50px;
-  height: auto;
-  object-fit: contain;
-}
-
-.input-search {
-  width: 100%;
-  background-color: #fff;
-  padding: 10px;
-  border: none;
-  height: 40px;
-}
-
-.input-search:focus {
-  outline: none;
-  background-color: #fa541c4d;
-}
-
-.search-block {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.search-btn {
-background-color: #fa541c;
-color: #fff;
-height: 40px;
-border-radius: 0;
 }
 
 .info-search {
@@ -246,21 +266,6 @@ border-radius: 0;
 
 .card-content {
   text-align: start;
-}
-
-/* избранное */
-
-.search-favorites {
-  width: 100%;
-position: relative;
-}
-
-.btn-favorites {
-  position: absolute;
-  z-index: 10;
-  top: 0;
-  right: 0;
-  background-color: transparent;
 }
 
 /* Favorites */

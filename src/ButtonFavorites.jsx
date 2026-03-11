@@ -3,11 +3,11 @@ import { Button } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteToFavorites } from "./redux/favoritesSlice";
 import { ModalFavorites } from "./ModalFavorites";
-import { closeModal, openModalEdit } from "./redux/modalSlice";
+import { closeModal, modalSelector, openModalEdit } from "./redux/modalSlice";
 
 export const FavoritesButton = ({ item }) => {
   const dispatch = useDispatch();
-  const { isOpen } = useSelector((store) => store.modal);
+  const {isOpen}  = useSelector(modalSelector);
 
   const handleDelete = (e) => {
     e.stopPropagation();

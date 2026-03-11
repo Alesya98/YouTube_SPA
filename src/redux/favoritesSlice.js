@@ -19,8 +19,12 @@ const favoriteSlice = createSlice({
       );
     },
   },
+  selectors: {
+    selectorFavorite: (sliceFavorite) => sliceFavorite.items
+  },
 });
 
 export const { addToFavorites, deleteToFavorites, upDataFavorites } =
   favoriteSlice.actions;
+  export const {selectorFavorite} = favoriteSlice.selectors
 export default favoriteSlice.reducer;

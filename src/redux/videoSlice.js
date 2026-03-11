@@ -40,6 +40,10 @@ const videoSlice = createSlice({
         },
       );
   },
+  selectors: {
+    videoSelector: (videoSlice) => videoSlice
+  }
 });
 
 export default videoSlice.reducer;
+export const {videoSelector} = videoSlice.selectors

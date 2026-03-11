@@ -1,4 +1,3 @@
-//отдельный элемнет с превью, названием и описанием видео
 
 export const VideoCard = ({ card, viewType }) => {
   return (
