@@ -1,11 +1,23 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { LoginOut } from "./LoginOut";
-import logo from "./assets/logo.svg";
+import logo from "../assets/logo.svg";
 
 export const Header = () => {
+  const navigate = useNavigate()
+  const token = localStorage.getItem('token')
+
+  const handleLogoClick = (e) => {
+    e.preventDefault();
+    if (token) {
+      navigate('/searchvideo')
+    } else {
+      navigate('/login')
+    }
+  }
+
   return (
     <header className="header">
-      <a href="#">
+      <a href="/" onClick={handleLogoClick}>
         <img className="logo-header" src={logo} alt="logo" />
       </a>
 

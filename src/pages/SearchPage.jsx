@@ -1,4 +1,4 @@
-import { SearchVideo } from "./SearchVideo";
+import { SearchVideo } from "../components/SearchVideo";
 
 export const SearchPage = () => {
   return (

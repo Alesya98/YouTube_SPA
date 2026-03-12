@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getVideo } from "./api/VideoAPI";
+import { getVideo } from "../api/VideoAPI";
 import { VideoList } from "./VideoList";
 import { HeartOutlined } from "@ant-design/icons";
 import { useSearchParams } from "react-router-dom";
 import { ModalFavorites } from "./ModalFavorites";
-import { closeModal, modalSelector, openModal } from "./redux/modalSlice";
-import { videoSelector } from "./redux/videoSlice";
+import { closeModal, modalSelector, openModal } from "../redux/modalSlice";
+import { videoSelector } from "../redux/videoSlice";
 
 export const SearchVideo = () => {
   const [search, setSearch] = useState("");
@@ -21,14 +21,13 @@ export const SearchVideo = () => {
   const sort = searchParams.get("order") || "";
 
   useEffect(() => {
-    if (query) { 
+    if (query) {
       dispatch(getVideo({ query, count, sort }));
       if (query !== search) {
-        setSearch(query)
+        setSearch(query);
       }
-      setSearchParams({})
-     
-    } 
+      setSearchParams({});
+    }
   }, [query, count, sort, dispatch, setSearchParams]);
 
   useEffect(() => {
@@ -37,7 +36,6 @@ export const SearchVideo = () => {
 
   const handleSearch = (e) => {
     setSearch(e.target.value);
-
   };
 
   const handleKeyDown = (e) => {

@@ -1,11 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Button, Col, InputNumber, Row, Select, Slider } from "antd";
-import { closeModal, modalSelector } from "./redux/modalSlice";
+import { closeModal, modalSelector } from "../redux/modalSlice";
 import { useNavigate } from "react-router-dom";
-import { addToFavorites, upDataFavorites } from "./redux/favoritesSlice";
+import { addToFavorites, upDataFavorites } from "../redux/favoritesSlice";
 import { useState } from "react";
-
-
 
 export const ModalFavorites = () => {
   const { modalProps, mode } = useSelector(modalSelector);
@@ -36,8 +34,8 @@ export const ModalFavorites = () => {
   };
 
   const onSelect = (value) => {
-    setFormData((prev) => ({...prev, sort: value}))
-  }
+    setFormData((prev) => ({ ...prev, sort: value }));
+  };
 
   return (
     <>

@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { FavoritesButton } from "./ButtonFavorites";
-import { selectorFavorite } from "./redux/favoritesSlice";
+import { FavoritesButton } from "../components/ButtonFavorites";
+import { selectorFavorite } from "../redux/favoritesSlice";
 
 export const FavoritesVideo = () => {
   const items = useSelector(selectorFavorite);

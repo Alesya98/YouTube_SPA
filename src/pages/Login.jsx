@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "./assets/logo.svg";
+import logo from "../assets/logo.svg";
 
 const LOGIN_URL = import.meta.env.VITE_LOGIN_URL;
 
@@ -70,7 +70,7 @@ export const Login = () => {
           <label htmlFor="password">Пароль</label>
           <input
             className="form-input"
-            type="text"
+            type="password"
             id="password"
             value={dataUp.password}
             name="password"

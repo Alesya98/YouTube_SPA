@@ -1,10 +1,10 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
-import { Login } from "./Login";
-import { PrivateRoute } from "./PrivateRouter";
-import { IndexPage } from "./IndexPage";
-import { FavoritesVideo } from "./FavoritesVideo";
-import { SearchPage } from "./SearchPage";
+import { Login } from "./pages/Login";
+import { PrivateRoute } from "./components/router/PrivateRouter";
+import { FavoritesVideo } from "./pages/FavoritesVideo";
+import { SearchPage } from "./pages/SearchPage";
+import { IndexPage } from "./pages/IndexPage";
 
 function App() {
   return (

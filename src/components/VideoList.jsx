@@ -3,7 +3,7 @@ import { UnorderedListOutlined, AppstoreOutlined } from "@ant-design/icons";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { Spin } from "antd";
-import { videoSelector } from "./redux/videoSlice";
+import { videoSelector } from "../redux/videoSlice";
 
 export const VideoList = () => {
   const { value, currentSearch, total, loading, error } =
